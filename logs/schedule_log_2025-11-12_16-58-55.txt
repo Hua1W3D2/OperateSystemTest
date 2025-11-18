@@ -1,0 +1,34 @@
+==== 进程调度模拟开始 ====
+[步骤 1] 执行进程 P1: priority=5, time=1
+→ P1 已完成，状态置为 E。
+[步骤 2] 执行进程 P2: priority=4, time=2
+→ P2 执行后: priority=3, 剩余时间=1
+[步骤 3] 执行进程 P2: priority=3, time=1
+→ P2 已完成，状态置为 E。
+[步骤 4] 执行进程 P3: priority=3, time=3
+→ P3 执行后: priority=2, 剩余时间=2
+[步骤 5] 执行进程 P3: priority=2, time=2
+→ P3 执行后: priority=1, 剩余时间=1
+[步骤 6] 执行进程 P4: priority=2, time=4
+→ P4 执行后: priority=1, 剩余时间=3
+[步骤 7] 执行进程 P3: priority=1, time=1
+→ P3 已完成，状态置为 E。
+[步骤 8] 执行进程 P4: priority=1, time=3
+→ P4 执行后: priority=0, 剩余时间=2
+[步骤 9] 执行进程 P5: priority=1, time=5
+→ P5 执行后: priority=0, 剩余时间=4
+[步骤 10] 执行进程 P4: priority=0, time=2
+→ P4 执行后: priority=-1, 剩余时间=1
+[步骤 11] 执行进程 P5: priority=0, time=4
+→ P5 执行后: priority=-1, 剩余时间=3
+[步骤 12] 执行进程 P4: priority=-1, time=1
+→ P4 已完成，状态置为 E。
+[步骤 13] 执行进程 P5: priority=-1, time=3
+→ P5 执行后: priority=-2, 剩余时间=2
+[步骤 14] 执行进程 P5: priority=-2, time=2
+→ P5 执行后: priority=-3, 剩余时间=1
+[步骤 15] 执行进程 P5: priority=-3, time=1
+→ P5 已完成，状态置为 E。
+所有进程均已结束。调度完成。
+
+==== 调度结束 ====
