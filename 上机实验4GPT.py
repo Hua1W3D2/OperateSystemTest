@@ -41,10 +41,10 @@ class SchedulerGUI:
         frame_output = ttk.LabelFrame(root, text="运行结果", padding=10)
         frame_output.pack(fill="both", expand=True, padx=10, pady=5)
 
-        self.label_current = tk.Label(frame_output, text="当前执行：", font=("微软雅黑", 12))
+        self.label_current = tk.Label(frame_output, text="当前执行：", font=("微软雅黑", 16))
         self.label_current.pack(anchor="w")
 
-        self.label_queue = tk.Label(frame_output, text="就绪队列：", font=("微软雅黑", 12))
+        self.label_queue = tk.Label(frame_output, text="就绪队列：", font=("微软雅黑", 16))
         self.label_queue.pack(anchor="w")
 
         # PCB表
@@ -58,7 +58,7 @@ class SchedulerGUI:
         # ==== 日志显示区 ====
         frame_log = ttk.LabelFrame(root, text="调度日志", padding=5)
         frame_log.pack(fill="both", expand=True, padx=10, pady=5)
-        self.log_box = scrolledtext.ScrolledText(frame_log, wrap="word", height=10, font=("Consolas", 10))
+        self.log_box = scrolledtext.ScrolledText(frame_log, wrap="word", height=10, font=("Consolas", 16))
         self.log_box.pack(fill="both", expand=True)
 
         # 日志文件路径
@@ -67,7 +67,8 @@ class SchedulerGUI:
         self.log_path = f"logs/schedule_log_{timestamp}.txt"
         self.log_file = open(self.log_path, "w", encoding="utf-8")
 
-        self.step_delay = 1000
+        # 调节运行时间
+        self.step_delay = 500
         self.step_idx = 0
         self.queue = []
 
